@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = "text-center">Select a User</h1>
+    <app-view-users></app-view-users>
+    <button type = "submit" (click)="selectedUser(username.value)" class = "btn btn-primary">
+        Select User
+    </button>
+    <h1 class = "text-center">Cancel a Flight for a User</h1>
+    <app-view-flight></app-view-flight>
+    <button type = "submit" (click)="selectedFlight(code.value)" class = "btn btn-primary">
+        Select Flight
+    </button>
+</body>
+</html>

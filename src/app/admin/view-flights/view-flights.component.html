@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = "text-center">View Flights</h1>
+
+    <div class = "card" *ngFor = "let flight of flights$; index as currentFlight">
+        <div class = "card-header title">
+        <div class = " list-group-item Destination">{{flight.destination}}</div>
+        <div class = " list-group-item Origin">{{flight.origin}}</div>
+        <div class = " list-group-item Departure">{{flight.departure}}</div>
+        <div class = " list-group-item Arrival">{{flight.arrival}}</div>
+        <div class = " list-group-item Type">{{flight.type}}</div>
+        <div class = " list-group-item Code">{{flight.code}}</div>
+        <div class = " list-group-item Airline">{{flight.airline}}</div>
+
+        <button class = "select" (click) = "onClick(currentFlight)"></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = "text-center">View Users</h1>
+
+    <div class = "card" *ngFor = "let user of users$; index as currentUser">
+        <div class = "card-header title">
+            <div class = "key">{{user.key}}</div>
+            <button class = "select" (click) = "onClick(currentUser)"></button>
+            <div class = "Username">{{user.username}}</div>
+        </div>
+    </div>
+
+    <div class = "list-group list-group-flush">
+        <li class = "list-group-item">{{flight.type}}</li>
+        <li class = "list-group-item">{{flight.code}}</li>
+    </div>
+
+</body>
+</html>
